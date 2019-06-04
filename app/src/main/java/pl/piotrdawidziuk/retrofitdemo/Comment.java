@@ -15,5 +15,23 @@ public class Comment {
     @SerializedName("body")
     private String text;
 
+    public int getPostId() {
+        return postId;
+    }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getText() {
+        return text;
+    }
 }
