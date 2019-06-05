@@ -42,7 +42,13 @@ public class MainActivity extends AppCompatActivity {
     private void createPost() {
         Post post = new Post(23,"New title","New text");
 
-        Call<Post> call = jsonPlaceHolderApi.createPost(post);
+        Map <String,String> fields= new HashMap<>();
+
+        fields.put("userId","11");
+        fields.put("title","some title");
+
+
+        Call<Post> call = jsonPlaceHolderApi.createPost(fields);
 
         call.enqueue(new Callback<Post>() {
             @Override
